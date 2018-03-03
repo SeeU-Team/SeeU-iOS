@@ -8,19 +8,63 @@
 
 import UIKit
 
-class ConnectionViewController: UIViewController {
+import FacebookLogin
+import FacebookCore
+import FBSDKLoginKit
 
+class ConnectionViewController: UIViewController, LoginButtonDelegate {
+    
+    var dict : [String : AnyObject]!
+    
+    @IBOutlet weak var loginButton: FBSDKLoginButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        //creating button
+        //let loginButton = LoginButton(readPermissions: [ .publicProfile, .userPhotos ])
+        //loginButton.center = view.center
+        //loginButton.delegate = self
+        
+        self.loginButton.readPermissions = [ "public_profile", "user_photos" ]
+        
+        //adding it to view
+        //view.addSubview(loginButton)
+        
+        //if the user is already logged in
+        if let accessToken = FBSDKAccessToken.current(){
+            getFBUserData()
+            print(accessToken.appID)
+            // TODO: Go to next controller
+        }
+    }
+    
+    //function is fetching the user data
+    func getFBUserData(){
+        if((FBSDKAccessToken.current()) != nil){
+            FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, picture.type(large), email"]).start(completionHandler: { (connection, result, error) -> Void in
+                if (error == nil){
+                    self.dict = result as! [String : AnyObject]
+                    print(result!)
+                    print(self.dict)
+                }
+            })
+        }
+    }
+    
+    func loginButtonDidCompleteLogin(_ loginButton: LoginButton, result: LoginResult) {
+        print("logged in")
+        self.getFBUserData()
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: LoginButton) {
+        print("logged out")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation
