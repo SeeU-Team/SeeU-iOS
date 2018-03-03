@@ -15,6 +15,8 @@
 		F838950E204AFD51006F8EDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F838950C204AFD51006F8EDE /* LaunchScreen.storyboard */; };
 		F8389519204AFD51006F8EDE /* SeeUTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8389518204AFD51006F8EDE /* SeeUTests.swift */; };
 		F8389524204AFD51006F8EDE /* SeeUUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8389523204AFD51006F8EDE /* SeeUUITests.swift */; };
+		F8389532204AFEA0006F8EDE /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8389531204AFEA0006F8EDE /* ThirdViewController.swift */; };
+		F8389534204AFF11006F8EDE /* ConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8389533204AFF11006F8EDE /* ConnectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		F838951F204AFD51006F8EDE /* SeeUUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeeUUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8389523204AFD51006F8EDE /* SeeUUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeUUITests.swift; sourceTree = "<group>"; };
 		F8389525204AFD51006F8EDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8389531204AFEA0006F8EDE /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		F8389533204AFF11006F8EDE /* ConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				F838950A204AFD51006F8EDE /* Assets.xcassets */,
 				F838950C204AFD51006F8EDE /* LaunchScreen.storyboard */,
 				F838950F204AFD51006F8EDE /* Info.plist */,
+				F8389531204AFEA0006F8EDE /* ThirdViewController.swift */,
+				F8389533204AFF11006F8EDE /* ConnectionViewController.swift */,
 			);
 			path = SeeU;
 			sourceTree = "<group>";
@@ -264,6 +270,8 @@
 			files = (
 				F8389506204AFD51006F8EDE /* SecondViewController.swift in Sources */,
 				F8389502204AFD51006F8EDE /* AppDelegate.swift in Sources */,
+				F8389534204AFF11006F8EDE /* ConnectionViewController.swift in Sources */,
+				F8389532204AFEA0006F8EDE /* ThirdViewController.swift in Sources */,
 				F8389504204AFD51006F8EDE /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
