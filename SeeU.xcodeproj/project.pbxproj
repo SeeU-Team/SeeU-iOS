@@ -11,7 +11,7 @@
 		5727E1CAD601A77D9F75C5AF /* Pods_SeeUUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A78DC973BA6098F88B0D16E /* Pods_SeeUUITests.framework */; };
 		95E48095F6CC5D1FBAAFEA51 /* Pods_SeeUTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0C88EAC436D01FBBA7CB9B /* Pods_SeeUTests.framework */; };
 		F8389502204AFD51006F8EDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8389501204AFD51006F8EDE /* AppDelegate.swift */; };
-		F8389504204AFD51006F8EDE /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8389503204AFD51006F8EDE /* FirstViewController.swift */; };
+		F8389504204AFD51006F8EDE /* TeamWallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8389503204AFD51006F8EDE /* TeamWallViewController.swift */; };
 		F8389506204AFD51006F8EDE /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8389505204AFD51006F8EDE /* SecondViewController.swift */; };
 		F8389509204AFD51006F8EDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8389507204AFD51006F8EDE /* Main.storyboard */; };
 		F838950B204AFD51006F8EDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F838950A204AFD51006F8EDE /* Assets.xcassets */; };
@@ -19,7 +19,8 @@
 		F8389519204AFD51006F8EDE /* SeeUTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8389518204AFD51006F8EDE /* SeeUTests.swift */; };
 		F8389524204AFD51006F8EDE /* SeeUUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8389523204AFD51006F8EDE /* SeeUUITests.swift */; };
 		F8389532204AFEA0006F8EDE /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8389531204AFEA0006F8EDE /* ThirdViewController.swift */; };
-		F8389534204AFF11006F8EDE /* ConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8389533204AFF11006F8EDE /* ConnectionViewController.swift */; };
+		F8389534204AFF11006F8EDE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8389533204AFF11006F8EDE /* LoginViewController.swift */; };
+		F8B920F7205AC5030055BA03 /* TypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B920F6205AC5030055BA03 /* TypeCollectionViewCell.swift */; };
 		F8DBA0AE20558B22000CB1DD /* TeamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DBA0AD20558B22000CB1DD /* TeamCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,7 +53,7 @@
 		DE913A7903C8FE792533D89C /* Pods-SeeUUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeeUUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SeeUUITests/Pods-SeeUUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F83894FE204AFD51006F8EDE /* SeeU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeeU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8389501204AFD51006F8EDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F8389503204AFD51006F8EDE /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		F8389503204AFD51006F8EDE /* TeamWallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamWallViewController.swift; sourceTree = "<group>"; };
 		F8389505204AFD51006F8EDE /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		F8389508204AFD51006F8EDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F838950A204AFD51006F8EDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,7 +66,8 @@
 		F8389523204AFD51006F8EDE /* SeeUUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeUUITests.swift; sourceTree = "<group>"; };
 		F8389525204AFD51006F8EDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8389531204AFEA0006F8EDE /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
-		F8389533204AFF11006F8EDE /* ConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionViewController.swift; sourceTree = "<group>"; };
+		F8389533204AFF11006F8EDE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F8B920F6205AC5030055BA03 /* TypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCollectionViewCell.swift; sourceTree = "<group>"; };
 		F8DBA0AD20558B22000CB1DD /* TeamCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,15 +148,16 @@
 			isa = PBXGroup;
 			children = (
 				F8389501204AFD51006F8EDE /* AppDelegate.swift */,
-				F8389503204AFD51006F8EDE /* FirstViewController.swift */,
+				F8389503204AFD51006F8EDE /* TeamWallViewController.swift */,
 				F8389505204AFD51006F8EDE /* SecondViewController.swift */,
 				F8389507204AFD51006F8EDE /* Main.storyboard */,
 				F838950A204AFD51006F8EDE /* Assets.xcassets */,
 				F838950C204AFD51006F8EDE /* LaunchScreen.storyboard */,
 				F838950F204AFD51006F8EDE /* Info.plist */,
 				F8389531204AFEA0006F8EDE /* ThirdViewController.swift */,
-				F8389533204AFF11006F8EDE /* ConnectionViewController.swift */,
+				F8389533204AFF11006F8EDE /* LoginViewController.swift */,
 				F8DBA0AD20558B22000CB1DD /* TeamCollectionViewCell.swift */,
+				F8B920F6205AC5030055BA03 /* TypeCollectionViewCell.swift */,
 			);
 			path = SeeU;
 			sourceTree = "<group>";
@@ -484,10 +487,11 @@
 			files = (
 				F8389506204AFD51006F8EDE /* SecondViewController.swift in Sources */,
 				F8389502204AFD51006F8EDE /* AppDelegate.swift in Sources */,
-				F8389534204AFF11006F8EDE /* ConnectionViewController.swift in Sources */,
+				F8389534204AFF11006F8EDE /* LoginViewController.swift in Sources */,
+				F8B920F7205AC5030055BA03 /* TypeCollectionViewCell.swift in Sources */,
 				F8DBA0AE20558B22000CB1DD /* TeamCollectionViewCell.swift in Sources */,
 				F8389532204AFEA0006F8EDE /* ThirdViewController.swift in Sources */,
-				F8389504204AFD51006F8EDE /* FirstViewController.swift in Sources */,
+				F8389504204AFD51006F8EDE /* TeamWallViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,8 +10,6 @@ import UIKit
 
 class TeamCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var textView: UITextView!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

@@ -12,7 +12,7 @@ import FacebookLogin
 import FacebookCore
 import FBSDKLoginKit
 
-class ConnectionViewController: UIViewController, LoginButtonDelegate {
+class LoginViewController: UIViewController, LoginButtonDelegate {
     
     var dict : [String : AnyObject]!
     
@@ -21,21 +21,26 @@ class ConnectionViewController: UIViewController, LoginButtonDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //creating button
+        // creating button
         //let loginButton = LoginButton(readPermissions: [ .publicProfile, .userPhotos ])
         //loginButton.center = view.center
         //loginButton.delegate = self
         
         self.loginButton.readPermissions = [ "public_profile", "user_photos" ]
         
-        //adding it to view
+        // adding it to view
         //view.addSubview(loginButton)
-        
-        //if the user is already logged in
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        // if the user is already logged in
         if let accessToken = FBSDKAccessToken.current(){
-            getFBUserData()
-            print(accessToken.appID)
+            // getFBUserData()
+            print(accessToken.tokenString)
+            print("Already logged in !")
             // TODO: Go to next controller
+            //goToTabbedView()
+            performSegue(withIdentifier: "loginToTeamWall", sender: self)
         }
     }
     
@@ -66,6 +71,11 @@ class ConnectionViewController: UIViewController, LoginButtonDelegate {
         // Dispose of any resources that can be recreated.
     }
 
+    func goToTabbedView() {
+        let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "teamWall")
+        present(controller, animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
