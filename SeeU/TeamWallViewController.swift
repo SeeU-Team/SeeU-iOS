@@ -38,6 +38,11 @@ class TeamWallViewController: UIViewController, UICollectionViewDelegate, UIColl
         self.teamCollection.reloadData()
         self.typeCollection.reloadData()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let indexPath: IndexPath = IndexPath(row: 0, section: 0)
+        typeCollection.selectItem(at: indexPath, animated: true, scrollPosition: UICollectionViewScrollPosition.centeredVertically)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -64,7 +69,7 @@ class TeamWallViewController: UIViewController, UICollectionViewDelegate, UIColl
         } else {
             let cell: TeamCollectionViewCell = teamCollection.dequeueReusableCell(withReuseIdentifier: "teamCollectionViewCell", for: indexPath) as! TeamCollectionViewCell
             
-            //cell.textView?.text = teams[indexPath.row]
+            cell.name.text = teams[indexPath.row]
             
             cell.layer.masksToBounds = true;
             cell.layer.cornerRadius = 6;
@@ -73,5 +78,14 @@ class TeamWallViewController: UIViewController, UICollectionViewDelegate, UIColl
         }
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        teams.removeAll()
+        
+        for i in 0 ..< 10 {
+            teams.append("team \(i) - \(types[indexPath.row])")
+        }
+        
+        teamCollection.reloadData()
+    }
 }
 
