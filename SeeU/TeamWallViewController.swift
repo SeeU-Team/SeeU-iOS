@@ -79,13 +79,17 @@ class TeamWallViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        teams.removeAll()
-        
-        for i in 0 ..< 10 {
-            teams.append("team \(i) - \(types[indexPath.row])")
+        if collectionView == typeCollection {
+            teams.removeAll()
+            
+            for i in 0 ..< 10 {
+                teams.append("team \(i) - \(types[indexPath.row])")
+            }
+            
+            teamCollection.reloadData()
+        } else {
+            
         }
-        
-        teamCollection.reloadData()
     }
 }
 

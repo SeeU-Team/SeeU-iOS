@@ -18,43 +18,29 @@ class TypeCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        gradient.frame = self.bounds
-        gradient.colors = [UIColor.green.cgColor, UIColor.blue.cgColor]
+        self.initGradient()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
+        self.initGradient()
+    }
+    
+    func initGradient() {
         gradient.frame = self.bounds
         gradient.colors = [startColor.cgColor, endColor.cgColor]
+        gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
+        gradient.endPoint = CGPoint(x: 1.0, y: 0.5)
     }
     
     override var isSelected: Bool {
         didSet {
             if self.isSelected {
                 //self.backgroundColor = UIColor.white
-                /*
-                gradient.startPoint = CGPoint(x: 0, y: 0)
-                gradient.endPoint = CGPoint(x: self.frame.size.width, y: 0)
- */
-                
                 self.layer.insertSublayer(gradient, at: 0)
             } else {
-                self.backgroundColor = UIColor.gray
-                print("before remove sublayer")
+                self.backgroundColor = UIColor(displayP3Red: 200.0/255, green: 200.0/255, blue: 200.0/255, alpha: 1.0)
                 gradient.removeFromSuperlayer()
-                print("after remove sublayer")
-                /*
-                if (self.layer.sublayers != nil && self.layer.sublayers!.count > 0) {
-                    for var sub in self.layer.sublayers! {
-                        if sub != nil {
-                            print("before remove sublayer")
-                            sub.removeFromSuperlayer()
-                        }
-                    }
-                }
-                 */
             }
         }
     }
