@@ -8,7 +8,7 @@ target 'SeeU' do
   # Pods for SeeU
   pod 'FacebookCore'
   pod 'FacebookLogin'
-	pod 'FacebookShare'
+  pod 'FacebookShare'
 
   target 'SeeUTests' do
     inherit! :search_paths
@@ -19,5 +19,9 @@ target 'SeeU' do
     inherit! :search_paths
     # Pods for testing
   end
-
+  
+  pod 'Alamofire', '~> 4.7'
+  pod 'AlamofireImage', '~> 3.3'
+  pod 'MaterialComponents/Cards'
+  
 end

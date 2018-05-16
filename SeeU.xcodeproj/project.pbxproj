@@ -20,6 +20,10 @@
 		F8389524204AFD51006F8EDE /* SeeUUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8389523204AFD51006F8EDE /* SeeUUITests.swift */; };
 		F8389532204AFEA0006F8EDE /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8389531204AFEA0006F8EDE /* ThirdViewController.swift */; };
 		F8389534204AFF11006F8EDE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8389533204AFF11006F8EDE /* LoginViewController.swift */; };
+		F8B72FF720AC1FE10038A5C9 /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B72FF620AC1FE10038A5C9 /* ImageUtils.swift */; };
+		F8B72FF920AC7C760038A5C9 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B72FF820AC7C760038A5C9 /* Member.swift */; };
+		F8B72FFB20AC7D570038A5C9 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B72FFA20AC7D570038A5C9 /* Team.swift */; };
+		F8B72FFD20AC7F9D0038A5C9 /* GradientUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B72FFC20AC7F9D0038A5C9 /* GradientUtils.swift */; };
 		F8B920F7205AC5030055BA03 /* TypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B920F6205AC5030055BA03 /* TypeCollectionViewCell.swift */; };
 		F8DBA0AE20558B22000CB1DD /* TeamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DBA0AD20558B22000CB1DD /* TeamCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -67,6 +71,10 @@
 		F8389525204AFD51006F8EDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8389531204AFEA0006F8EDE /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		F8389533204AFF11006F8EDE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F8B72FF620AC1FE10038A5C9 /* ImageUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
+		F8B72FF820AC7C760038A5C9 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		F8B72FFA20AC7D570038A5C9 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		F8B72FFC20AC7F9D0038A5C9 /* GradientUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientUtils.swift; sourceTree = "<group>"; };
 		F8B920F6205AC5030055BA03 /* TypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCollectionViewCell.swift; sourceTree = "<group>"; };
 		F8DBA0AD20558B22000CB1DD /* TeamCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,6 +166,10 @@
 				F8389533204AFF11006F8EDE /* LoginViewController.swift */,
 				F8DBA0AD20558B22000CB1DD /* TeamCollectionViewCell.swift */,
 				F8B920F6205AC5030055BA03 /* TypeCollectionViewCell.swift */,
+				F8B72FF620AC1FE10038A5C9 /* ImageUtils.swift */,
+				F8B72FF820AC7C760038A5C9 /* Member.swift */,
+				F8B72FFA20AC7D570038A5C9 /* Team.swift */,
+				F8B72FFC20AC7F9D0038A5C9 /* GradientUtils.swift */,
 			);
 			path = SeeU;
 			sourceTree = "<group>";
@@ -192,7 +204,6 @@
 				F83894FB204AFD50006F8EDE /* Frameworks */,
 				F83894FC204AFD50006F8EDE /* Resources */,
 				E21E38B6D3B8C0EB80036B85 /* [CP] Embed Pods Frameworks */,
-				109CD334E5745944FD9B7945 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -211,8 +222,6 @@
 				F8389510204AFD51006F8EDE /* Sources */,
 				F8389511204AFD51006F8EDE /* Frameworks */,
 				F8389512204AFD51006F8EDE /* Resources */,
-				89A60D510BCDFDDDC5E27E54 /* [CP] Embed Pods Frameworks */,
-				5D697AF0917512ABBC5939BB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -232,8 +241,6 @@
 				F838951B204AFD51006F8EDE /* Sources */,
 				F838951C204AFD51006F8EDE /* Frameworks */,
 				F838951D204AFD51006F8EDE /* Resources */,
-				A8435DD6D0EB4789523544FE /* [CP] Embed Pods Frameworks */,
-				5329777721FE05F483157545 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -252,7 +259,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = SeeU;
 				TargetAttributes = {
 					F83894FD204AFD50006F8EDE = {
@@ -319,21 +326,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		109CD334E5745944FD9B7945 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SeeU/Pods-SeeU-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		355402CEAA0E1D927F8AA2AB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -350,36 +342,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5329777721FE05F483157545 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SeeUUITests/Pods-SeeUUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5D697AF0917512ABBC5939BB /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SeeUTests/Pods-SeeUTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5F06E9F854647EC4F5DCDB44 /* [CP] Check Pods Manifest.lock */ = {
@@ -418,36 +380,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		89A60D510BCDFDDDC5E27E54 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SeeUTests/Pods-SeeUTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A8435DD6D0EB4789523544FE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SeeUUITests/Pods-SeeUUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		E21E38B6D3B8C0EB80036B85 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -455,6 +387,8 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SeeU/Pods-SeeU-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
@@ -462,9 +396,12 @@
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
+				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
@@ -472,6 +409,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -486,12 +424,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8389506204AFD51006F8EDE /* SecondViewController.swift in Sources */,
+				F8B72FFD20AC7F9D0038A5C9 /* GradientUtils.swift in Sources */,
 				F8389502204AFD51006F8EDE /* AppDelegate.swift in Sources */,
 				F8389534204AFF11006F8EDE /* LoginViewController.swift in Sources */,
 				F8B920F7205AC5030055BA03 /* TypeCollectionViewCell.swift in Sources */,
+				F8B72FF920AC7C760038A5C9 /* Member.swift in Sources */,
 				F8DBA0AE20558B22000CB1DD /* TeamCollectionViewCell.swift in Sources */,
 				F8389532204AFEA0006F8EDE /* ThirdViewController.swift in Sources */,
 				F8389504204AFD51006F8EDE /* TeamWallViewController.swift in Sources */,
+				F8B72FFB20AC7D570038A5C9 /* Team.swift in Sources */,
+				F8B72FF720AC1FE10038A5C9 /* ImageUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,6 +502,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -567,6 +510,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -617,6 +561,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -624,6 +569,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
