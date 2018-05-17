@@ -15,28 +15,38 @@ class TeamWallViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     var teams: [String] = []
     var types: [String] = []
+    var selectedType: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        for i in 0 ..< 10 {
-            teams.append("team " + "\(i)")
-        }
+        loadTypes()
+        reloadTeams()
         
+        self.teamCollection.delegate = self
+        self.teamCollection.dataSource = self
+        
+        self.typeCollection.delegate = self
+        self.typeCollection.dataSource = self
+    }
+    
+    func loadTypes() {
         types.append("Popular")
         types.append("Barbecue")
         types.append("Dancing")
         types.append("Hangover")
         
-        self.teamCollection.delegate = self;
-        self.teamCollection.dataSource = self;
-        
-        self.typeCollection.delegate = self;
-        self.typeCollection.dataSource = self;
+        self.typeCollection.reloadData()
+    }
+    
+    func reloadTeams() {
+        teams.removeAll()
+        for i in 0 ..< 10 {
+            teams.append("team \(i) - \(types[selectedType])")
+        }
         
         self.teamCollection.reloadData()
-        self.typeCollection.reloadData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -53,7 +63,7 @@ class TeamWallViewController: UIViewController, UICollectionViewDelegate, UIColl
         if collectionView == typeCollection {
             return types.count
         }
-        return teams.count;
+        return teams.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -62,31 +72,26 @@ class TeamWallViewController: UIViewController, UICollectionViewDelegate, UIColl
             
             cell.name.text = types[indexPath.row]
             
-            cell.layer.masksToBounds = true;
-            cell.layer.cornerRadius = 6;
+            cell.layer.masksToBounds = true
+            cell.layer.cornerRadius = 6
             
-            return cell;
+            return cell
         } else {
             let cell: TeamCollectionViewCell = teamCollection.dequeueReusableCell(withReuseIdentifier: "teamCollectionViewCell", for: indexPath) as! TeamCollectionViewCell
             
             cell.name.text = teams[indexPath.row]
             
-            cell.layer.masksToBounds = true;
-            cell.layer.cornerRadius = 6;
+            cell.layer.masksToBounds = true
+            cell.layer.cornerRadius = 6
             
-            return cell;
+            return cell
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == typeCollection {
-            teams.removeAll()
-            
-            for i in 0 ..< 10 {
-                teams.append("team \(i) - \(types[indexPath.row])")
-            }
-            
-            teamCollection.reloadData()
+            selectedType = indexPath.row
+            reloadTeams()
         } else {
             
         }
