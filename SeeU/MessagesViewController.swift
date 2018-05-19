@@ -63,7 +63,7 @@ class MessagesViewController: UIViewController, UICollectionViewDelegate, UIColl
         
         memberCollectionView.reloadData()
     }
-    
+
     func loadTeams() {
         teams.removeAll()
         teams.append("Team 1")
