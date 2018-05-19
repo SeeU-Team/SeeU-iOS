@@ -15,6 +15,12 @@ class MessagesViewController: UIViewController, UICollectionViewDelegate, UIColl
     @IBOutlet weak var teamCardPicture: UIImageView!
     @IBOutlet weak var teamCardName: UILabel!
     @IBOutlet weak var teamCardMark: UILabel!
+    @IBOutlet weak var teamCardMemberPicture1: UIImageView!
+    @IBOutlet weak var teamCardMemberPicture2: UIImageView!
+    @IBOutlet weak var teamCardMemberPicture3: UIImageView!
+    @IBOutlet weak var teamCardMemberPicture4: UIImageView!
+    @IBOutlet weak var teamCardMemberPicture5: UIImageView!
+    @IBOutlet weak var teamCardExtraMembers: UILabel!
     @IBOutlet weak var teamCardNotReadMessages: UILabel!
     
     @IBOutlet weak var memberCollectionView: UICollectionView!
@@ -45,12 +51,15 @@ class MessagesViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     override func viewDidLayoutSubviews() {
         teamCard.setCardView()
+        teamCard.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.startMyTeamChat)))
         initTeamCardUpGradient()
         
-        ImageUtils.downloadAndSetImage(url: myTeam.pictureUrl, cornerRadius: 10.0, imageView: teamCardPicture)
+        ImageUtils.downloadAndSetImage(url: myTeam.pictureUrl, cornerRadius: 8.0, imageView: teamCardPicture)
         teamCardName.text = myTeam.name
         Mark.setDisplayedText(view: teamCardMark, mark: myTeam.mark)
         teamCardNotReadMessages.text = "\(21) messages non lus"
+        
+        handleMemberPictures()
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,7 +68,7 @@ class MessagesViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func initTeamCardUpGradient() {
-        let gradient = GradientUtils.getDefaultGradient(bounds: teamCardUp.bounds, cornerRadius: 6.0)
+        let gradient = GradientUtils.getDefaultGradient(bounds: teamCardUp.bounds, cornerRadius: 8.0)
         teamCardUp.layer.insertSublayer(gradient, at: 0)
     }
     
@@ -85,6 +94,35 @@ class MessagesViewController: UIViewController, UICollectionViewDelegate, UIColl
         teamCollectionView.reloadData()
     }
     
+    func handleMemberPictures() {
+        var pictureViews: [UIImageView] = []
+        pictureViews.append(teamCardMemberPicture1)
+        pictureViews.append(teamCardMemberPicture2)
+        pictureViews.append(teamCardMemberPicture3)
+        pictureViews.append(teamCardMemberPicture4)
+        pictureViews.append(teamCardMemberPicture5)
+        
+        var index: Int = 0
+        while index < pictureViews.count && index < myTeam.members.count {
+            ImageUtils.downloadAndSetImage(url: myTeam.members[index].pictureUrl, cornerRadius: 16.0, imageView: pictureViews[index])
+            index += 1
+        }
+        
+        index = myTeam.members.count
+        while index < pictureViews.count {
+            pictureViews[index].isHidden = true
+            index += 1
+        }
+        
+        if myTeam.members.count > pictureViews.count {
+            let nbExtra: Int = myTeam.members.count - pictureViews.count
+            
+            teamCardExtraMembers.text = "+\(nbExtra)"
+        } else {
+            teamCardExtraMembers.isHidden = true
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == memberCollectionView {
             return members.count
@@ -108,5 +146,8 @@ class MessagesViewController: UIViewController, UICollectionViewDelegate, UIColl
         }
     }
 
+    @objc func startMyTeamChat(sender: UITapGestureRecognizer) {
+        print("coucou start team chat\n")
+    }
 }
 

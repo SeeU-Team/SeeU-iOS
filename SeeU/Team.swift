@@ -15,6 +15,7 @@ class Team {
     var pictureUrl: String = ""
     var tags: String = ""
     var mark: Int = 0
+    var members: [Member] = []
     
     init() {
     }
@@ -25,6 +26,10 @@ class Team {
         team.pictureUrl = Team.DEBUG_URL
         team.tags = "#fiesta#noche#caliente"
         team.mark = index%6
+        
+        for i in 0..<index {
+            team.members.append(Member.debugMember(index: i))
+        }
         
         return team
     }
