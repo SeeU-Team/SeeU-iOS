@@ -21,6 +21,10 @@
 		F8389524204AFD51006F8EDE /* SeeUUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8389523204AFD51006F8EDE /* SeeUUITests.swift */; };
 		F8389532204AFEA0006F8EDE /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8389531204AFEA0006F8EDE /* ThirdViewController.swift */; };
 		F8389534204AFF11006F8EDE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8389533204AFF11006F8EDE /* LoginViewController.swift */; };
+		F8B72FF720AC1FE10038A5C9 /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B72FF620AC1FE10038A5C9 /* ImageUtils.swift */; };
+		F8B72FF920AC7C760038A5C9 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B72FF820AC7C760038A5C9 /* Member.swift */; };
+		F8B72FFB20AC7D570038A5C9 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B72FFA20AC7D570038A5C9 /* Team.swift */; };
+		F8B72FFD20AC7F9D0038A5C9 /* GradientUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B72FFC20AC7F9D0038A5C9 /* GradientUtils.swift */; };
 		F8B920F7205AC5030055BA03 /* TypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B920F6205AC5030055BA03 /* TypeCollectionViewCell.swift */; };
 		F8DBA0AE20558B22000CB1DD /* TeamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DBA0AD20558B22000CB1DD /* TeamCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -69,6 +73,10 @@
 		F8389525204AFD51006F8EDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8389531204AFEA0006F8EDE /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		F8389533204AFF11006F8EDE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F8B72FF620AC1FE10038A5C9 /* ImageUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
+		F8B72FF820AC7C760038A5C9 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		F8B72FFA20AC7D570038A5C9 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		F8B72FFC20AC7F9D0038A5C9 /* GradientUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientUtils.swift; sourceTree = "<group>"; };
 		F8B920F6205AC5030055BA03 /* TypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCollectionViewCell.swift; sourceTree = "<group>"; };
 		F8DBA0AD20558B22000CB1DD /* TeamCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -161,6 +169,10 @@
 				F8389533204AFF11006F8EDE /* LoginViewController.swift */,
 				F8DBA0AD20558B22000CB1DD /* TeamCollectionViewCell.swift */,
 				F8B920F6205AC5030055BA03 /* TypeCollectionViewCell.swift */,
+				F8B72FF620AC1FE10038A5C9 /* ImageUtils.swift */,
+				F8B72FF820AC7C760038A5C9 /* Member.swift */,
+				F8B72FFA20AC7D570038A5C9 /* Team.swift */,
+				F8B72FFC20AC7F9D0038A5C9 /* GradientUtils.swift */,
 			);
 			path = SeeU;
 			sourceTree = "<group>";
@@ -250,7 +262,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = SeeU;
 				TargetAttributes = {
 					F83894FD204AFD50006F8EDE = {
@@ -378,6 +390,8 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SeeU/Pods-SeeU-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
@@ -385,9 +399,12 @@
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
+				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
@@ -395,6 +412,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -409,13 +427,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8389506204AFD51006F8EDE /* MessagesViewController.swift in Sources */,
+				F8B72FFD20AC7F9D0038A5C9 /* GradientUtils.swift in Sources */,
 				F8389502204AFD51006F8EDE /* AppDelegate.swift in Sources */,
 				F8389534204AFF11006F8EDE /* LoginViewController.swift in Sources */,
 				F8B920F7205AC5030055BA03 /* TypeCollectionViewCell.swift in Sources */,
+				F8B72FF920AC7C760038A5C9 /* Member.swift in Sources */,
 				F8DBA0AE20558B22000CB1DD /* TeamCollectionViewCell.swift in Sources */,
 				F8389532204AFEA0006F8EDE /* ThirdViewController.swift in Sources */,
 				F8389504204AFD51006F8EDE /* TeamWallViewController.swift in Sources */,
 				BFCC98AC207CC2A000C88865 /* Gradient.swift in Sources */,
+				F8B72FFB20AC7D570038A5C9 /* Team.swift in Sources */,
+				F8B72FF720AC1FE10038A5C9 /* ImageUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +506,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -491,6 +514,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -541,6 +565,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -548,6 +573,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

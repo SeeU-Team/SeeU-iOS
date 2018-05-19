@@ -1,4 +1,7 @@
 PODS:
+  - Alamofire (4.7.2)
+  - AlamofireImage (3.3.1):
+    - Alamofire (~> 4.5)
   - Bolts (1.9.0):
     - Bolts/AppLinks (= 1.9.0)
     - Bolts/Tasks (= 1.9.0)
@@ -24,11 +27,45 @@ PODS:
     - FBSDKCoreKit
   - FBSDKShareKit (4.31.0):
     - FBSDKCoreKit (~> 4.31.0)
+  - MaterialComponents/Cards (55.0.4):
+    - MaterialComponents/Ink
+    - MaterialComponents/private/Icons/ic_check_circle
+    - MaterialComponents/private/Math
+    - MaterialComponents/private/Shapes
+    - MaterialComponents/ShadowLayer
+  - MaterialComponents/Ink (55.0.4):
+    - MaterialComponents/private/Math
+  - MaterialComponents/private/Icons/Base (55.0.4)
+  - MaterialComponents/private/Icons/ic_check_circle (55.0.4):
+    - MaterialComponents/private/Icons/Base
+  - MaterialComponents/private/Math (55.0.4)
+  - MaterialComponents/private/Shapes (55.0.4):
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowLayer
+  - MaterialComponents/ShadowElevations (55.0.4)
+  - MaterialComponents/ShadowLayer (55.0.4):
+    - MaterialComponents/ShadowElevations
 
 DEPENDENCIES:
+  - Alamofire (~> 4.7)
+  - AlamofireImage (~> 3.3)
   - FacebookCore
   - FacebookLogin
   - FacebookShare
+  - MaterialComponents/Cards
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireImage
+    - Bolts
+    - FacebookCore
+    - FacebookLogin
+    - FacebookShare
+    - FBSDKCoreKit
+    - FBSDKLoginKit
+    - FBSDKShareKit
+    - MaterialComponents
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -41,6 +78,8 @@ SPEC REPOS:
     - FBSDKShareKit
 
 SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  AlamofireImage: 3b35b586853abaf94ca1250f4e94cff3c21a4c0d
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   FacebookCore: 3ffa190a3f1f96cec0e44d3fc221bc322c595ffa
   FacebookLogin: 0af839ea858faef99550d16596b87b4a8e8906e6
@@ -48,7 +87,8 @@ SPEC CHECKSUMS:
   FBSDKCoreKit: 54db4c581123745d25a9f7c1608020b3aeabd118
   FBSDKLoginKit: 95a252ddffd6919c0f132a02292f0824616d8709
   FBSDKShareKit: 7c3a2e6bb5be15676aebe256444afb18c5d238b3
+  MaterialComponents: 059f649876b2e1ed6a623ba689175493422cc7cd
 
-PODFILE CHECKSUM: 67a30b14e73c3094ac3d2c875d4746161a00cfc4
+PODFILE CHECKSUM: f4a69be88c9e523586272d5a15090f748e376a16
 
 COCOAPODS: 1.5.2

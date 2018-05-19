@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
+import MaterialComponents
 
 class TeamCollectionViewCell: UICollectionViewCell {
     
@@ -14,24 +17,79 @@ class TeamCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var tags: UILabel!
     @IBOutlet weak var distance: UILabel!
     @IBOutlet weak var teamUpButton: UIButton!
-    
-    let startColor: UIColor = UIColor(displayP3Red: 23.0/255, green: 222.0/255, blue: 204.0/255, alpha: 1.0)
-    let endColor: UIColor = UIColor(displayP3Red: 46.0/255, green: 104.0/255, blue: 225.0/255, alpha: 1.0)
-    let gradient: CAGradientLayer = CAGradientLayer()
-    
-    func initGradient() {
-        gradient.frame = teamUpButton.bounds
-        gradient.colors = [startColor.cgColor, endColor.cgColor]
-        gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
-        gradient.endPoint = CGPoint(x: 1.0, y: 0.5)
-        gradient.cornerRadius = 6.0;
-        
-        teamUpButton.layer.insertSublayer(self.gradient, at: 0)
-    }
+    @IBOutlet weak var picture: UIView!
+    @IBOutlet weak var memberPicture1: UIImageView!
+    @IBOutlet weak var memberPicture2: UIImageView!
+    @IBOutlet weak var memberPicture3: UIImageView!
+    @IBOutlet weak var memberPicture4: UIImageView!
+    @IBOutlet weak var memberPicture5: UIImageView!
+    @IBOutlet weak var extraMembers: UILabel!
+    @IBOutlet weak var genderIndex: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        initGradient()
-        teamUpButton.layer.cornerRadius = 6.0;
+        
+        // Init gradient for teamUp button
+        let gradient = GradientUtils.getDefaultGradient(bounds: teamUpButton.bounds, cornerRadius: 6.0)
+        teamUpButton.layer.insertSublayer(gradient, at: 0)
+        
+//        DOES NOT WORK FOR NOW : Sublayer on UILabel hide the text...
+//        let gradientExtraMember = GradientUtils.getDefaultGradient(bounds: extraMembers.bounds, cornerRadius: 16.0)
+//        extraMembers.layer.insertSublayer(gradientExtraMember, at: 0)
+    }
+    
+    override func layoutSubviews() {
+        setTeamPicture()
+        setMemberPictures()
+        
+        let genderIndexGradient = GradientUtils.getGenderIndexGradient(bounds: genderIndex.bounds, middleLocation: 0.25)
+        genderIndex.layer.insertSublayer(genderIndexGradient, at: 0)
+    }
+    
+    func setTeamPicture() {
+        // TODO: make hhtp request to fetch the url
+        ImageUtils.downloadAndSetImageAsBackground(
+            url: Team.DEBUG_URL,
+            cornerRadius: 8.0,
+            view: picture)
+    }
+    
+    func setMemberPictures() {
+        ImageUtils.downloadAndSetImage(url: Member.DEBUG_URL, cornerRadius: 16, imageView: memberPicture1)
+        ImageUtils.downloadAndSetImage(url: Member.DEBUG_URL, cornerRadius: 16, imageView: memberPicture2)
+        ImageUtils.downloadAndSetImage(url: Member.DEBUG_URL, cornerRadius: 16, imageView: memberPicture3)
+        ImageUtils.downloadAndSetImage(url: Member.DEBUG_URL, cornerRadius: 16, imageView: memberPicture4)
+        ImageUtils.downloadAndSetImage(url: Member.DEBUG_URL, cornerRadius: 16, imageView: memberPicture5)
+        
+        extraMembers.text = "+4"
+        extraMembers.layer.cornerRadius = 16
+        extraMembers.layer.masksToBounds = true
+    }
+}
+
+extension UIView {
+    
+    func setCardView(view: UIView) {
+        /*
+        view.layer.cornerRadius = 8.0
+        view.layer.borderColor = UIColor.clear.cgColor
+        view.layer.borderWidth = 5.0
+        view.layer.shadowOpacity = 0.5
+        view.layer.shadowColor = UIColor.lightGray.cgColor
+        view.layer.shadowRadius = 5.0
+        view.layer.shadowOffset = CGSize(width:1, height: 1)
+        view.layer.masksToBounds = false
+ */
+        /*
+        view.layer.masksToBounds = false
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowOpacity = 0.5
+        view.layer.shadowOffset = CGSize(width: 1, height: 1)
+        view.layer.shadowRadius = 1
+        
+        view.layer.shadowPath = UIBezierPath(rect: bounds).cgPath
+        view.layer.shouldRasterize = true
+        view.layer.rasterizationScale = UIScreen.main.scale
+ */
     }
 }
