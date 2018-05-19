@@ -10,7 +10,8 @@
 		34454583B99F56D1B2AF465A /* Pods_SeeU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271330A16B13BF7A416F322D /* Pods_SeeU.framework */; };
 		5727E1CAD601A77D9F75C5AF /* Pods_SeeUUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A78DC973BA6098F88B0D16E /* Pods_SeeUUITests.framework */; };
 		95E48095F6CC5D1FBAAFEA51 /* Pods_SeeUTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0C88EAC436D01FBBA7CB9B /* Pods_SeeUTests.framework */; };
-		BFCC98AC207CC2A000C88865 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCC98AB207CC2A000C88865 /* Gradient.swift */; };
+		F4E8933AF528ACD7B78B6F7F /* MessagesMemberCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E89F5E8404930A22D388B5 /* MessagesMemberCollectionViewCell.swift */; };
+		F4E8953052697B5A18BCCCB7 /* MessagesTeamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E897B324F2A84A4DE8C359 /* MessagesTeamCollectionViewCell.swift */; };
 		F8389502204AFD51006F8EDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8389501204AFD51006F8EDE /* AppDelegate.swift */; };
 		F8389504204AFD51006F8EDE /* TeamWallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8389503204AFD51006F8EDE /* TeamWallViewController.swift */; };
 		F8389506204AFD51006F8EDE /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8389505204AFD51006F8EDE /* MessagesViewController.swift */; };
@@ -26,6 +27,8 @@
 		F8B72FFB20AC7D570038A5C9 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B72FFA20AC7D570038A5C9 /* Team.swift */; };
 		F8B72FFD20AC7F9D0038A5C9 /* GradientUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B72FFC20AC7F9D0038A5C9 /* GradientUtils.swift */; };
 		F8B920F7205AC5030055BA03 /* TypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B920F6205AC5030055BA03 /* TypeCollectionViewCell.swift */; };
+		F8C2BAF420B0358000D188D9 /* Mark.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C2BAF320B0357F00D188D9 /* Mark.swift */; };
+		F8C2BAF620B03DE900D188D9 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C2BAF520B03DE900D188D9 /* CardView.swift */; };
 		F8DBA0AE20558B22000CB1DD /* TeamCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DBA0AD20558B22000CB1DD /* TeamCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,9 +57,10 @@
 		3F0C88EAC436D01FBBA7CB9B /* Pods_SeeUTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SeeUTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		856746AB748B975414695F5C /* Pods-SeeU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeeU.release.xcconfig"; path = "Pods/Target Support Files/Pods-SeeU/Pods-SeeU.release.xcconfig"; sourceTree = "<group>"; };
 		917962C3BC7153CE146B989C /* Pods-SeeUTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeeUTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SeeUTests/Pods-SeeUTests.debug.xcconfig"; sourceTree = "<group>"; };
-		BFCC98AB207CC2A000C88865 /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
 		D814B5518A6E70B1354FDB88 /* Pods-SeeUUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeeUUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SeeUUITests/Pods-SeeUUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DE913A7903C8FE792533D89C /* Pods-SeeUUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeeUUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SeeUUITests/Pods-SeeUUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F4E897B324F2A84A4DE8C359 /* MessagesTeamCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesTeamCollectionViewCell.swift; sourceTree = "<group>"; };
+		F4E89F5E8404930A22D388B5 /* MessagesMemberCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesMemberCollectionViewCell.swift; sourceTree = "<group>"; };
 		F83894FE204AFD51006F8EDE /* SeeU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeeU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8389501204AFD51006F8EDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8389503204AFD51006F8EDE /* TeamWallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamWallViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 		F8B72FFA20AC7D570038A5C9 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		F8B72FFC20AC7F9D0038A5C9 /* GradientUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientUtils.swift; sourceTree = "<group>"; };
 		F8B920F6205AC5030055BA03 /* TypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCollectionViewCell.swift; sourceTree = "<group>"; };
+		F8C2BAF320B0357F00D188D9 /* Mark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mark.swift; sourceTree = "<group>"; };
+		F8C2BAF520B03DE900D188D9 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		F8DBA0AD20558B22000CB1DD /* TeamCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,22 +163,20 @@
 		F8389500204AFD51006F8EDE /* SeeU */ = {
 			isa = PBXGroup;
 			children = (
+				F8C2BAF220B02AB000D188D9 /* Utils */,
+				F8C2BAF120B02A9700D188D9 /* Messages */,
+				F8C2BAF020B02A7E00D188D9 /* TeamWall */,
 				F8389501204AFD51006F8EDE /* AppDelegate.swift */,
-				F8389503204AFD51006F8EDE /* TeamWallViewController.swift */,
-				F8389505204AFD51006F8EDE /* MessagesViewController.swift */,
 				F8389507204AFD51006F8EDE /* Main.storyboard */,
-				BFCC98AB207CC2A000C88865 /* Gradient.swift */,
 				F838950A204AFD51006F8EDE /* Assets.xcassets */,
 				F838950C204AFD51006F8EDE /* LaunchScreen.storyboard */,
 				F838950F204AFD51006F8EDE /* Info.plist */,
 				F8389531204AFEA0006F8EDE /* ThirdViewController.swift */,
 				F8389533204AFF11006F8EDE /* LoginViewController.swift */,
-				F8DBA0AD20558B22000CB1DD /* TeamCollectionViewCell.swift */,
-				F8B920F6205AC5030055BA03 /* TypeCollectionViewCell.swift */,
-				F8B72FF620AC1FE10038A5C9 /* ImageUtils.swift */,
 				F8B72FF820AC7C760038A5C9 /* Member.swift */,
 				F8B72FFA20AC7D570038A5C9 /* Team.swift */,
-				F8B72FFC20AC7F9D0038A5C9 /* GradientUtils.swift */,
+				F8C2BAF320B0357F00D188D9 /* Mark.swift */,
+				F8C2BAF520B03DE900D188D9 /* CardView.swift */,
 			);
 			path = SeeU;
 			sourceTree = "<group>";
@@ -193,6 +197,35 @@
 				F8389525204AFD51006F8EDE /* Info.plist */,
 			);
 			path = SeeUUITests;
+			sourceTree = "<group>";
+		};
+		F8C2BAF020B02A7E00D188D9 /* TeamWall */ = {
+			isa = PBXGroup;
+			children = (
+				F8389503204AFD51006F8EDE /* TeamWallViewController.swift */,
+				F8DBA0AD20558B22000CB1DD /* TeamCollectionViewCell.swift */,
+				F8B920F6205AC5030055BA03 /* TypeCollectionViewCell.swift */,
+			);
+			path = TeamWall;
+			sourceTree = "<group>";
+		};
+		F8C2BAF120B02A9700D188D9 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				F8389505204AFD51006F8EDE /* MessagesViewController.swift */,
+				F4E89F5E8404930A22D388B5 /* MessagesMemberCollectionViewCell.swift */,
+				F4E897B324F2A84A4DE8C359 /* MessagesTeamCollectionViewCell.swift */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		F8C2BAF220B02AB000D188D9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F8B72FF620AC1FE10038A5C9 /* ImageUtils.swift */,
+				F8B72FFC20AC7F9D0038A5C9 /* GradientUtils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,14 +463,17 @@
 				F8B72FFD20AC7F9D0038A5C9 /* GradientUtils.swift in Sources */,
 				F8389502204AFD51006F8EDE /* AppDelegate.swift in Sources */,
 				F8389534204AFF11006F8EDE /* LoginViewController.swift in Sources */,
+				F8C2BAF620B03DE900D188D9 /* CardView.swift in Sources */,
 				F8B920F7205AC5030055BA03 /* TypeCollectionViewCell.swift in Sources */,
 				F8B72FF920AC7C760038A5C9 /* Member.swift in Sources */,
 				F8DBA0AE20558B22000CB1DD /* TeamCollectionViewCell.swift in Sources */,
 				F8389532204AFEA0006F8EDE /* ThirdViewController.swift in Sources */,
 				F8389504204AFD51006F8EDE /* TeamWallViewController.swift in Sources */,
-				BFCC98AC207CC2A000C88865 /* Gradient.swift in Sources */,
 				F8B72FFB20AC7D570038A5C9 /* Team.swift in Sources */,
+				F8C2BAF420B0358000D188D9 /* Mark.swift in Sources */,
 				F8B72FF720AC1FE10038A5C9 /* ImageUtils.swift in Sources */,
+				F4E8933AF528ACD7B78B6F7F /* MessagesMemberCollectionViewCell.swift in Sources */,
+				F4E8953052697B5A18BCCCB7 /* MessagesTeamCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

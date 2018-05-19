@@ -11,9 +11,21 @@ import Foundation
 class Team {
     public static let DEBUG_URL: String = "https://scontent.xx.fbcdn.net/v/t1.0-9/s720x720/28796203_2100578413291884_3128132353430932217_n.jpg?oh=cf890e20f692253214d595fd266fd73b&oe=5B3BCC27"
     
-    private var name: String = ""
-    private var pictureUrl: String = ""
+    var name: String = ""
+    var pictureUrl: String = ""
+    var tags: String = ""
+    var mark: Int = 0
     
     init() {
+    }
+    
+    static func debugTeam(index: Int) -> Team {
+        let team: Team = Team()
+        team.name = "Team \(index)"
+        team.pictureUrl = Team.DEBUG_URL
+        team.tags = "#fiesta#noche#caliente"
+        team.mark = index%6
+        
+        return team
     }
 }

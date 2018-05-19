@@ -10,27 +10,24 @@ import UIKit
 
 class MessagesViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    @IBOutlet weak var teamCard: UIView!
     @IBOutlet weak var teamCardUp: UIView!
+    @IBOutlet weak var teamCardPicture: UIImageView!
+    @IBOutlet weak var teamCardName: UILabel!
+    @IBOutlet weak var teamCardMark: UILabel!
+    @IBOutlet weak var teamCardNotReadMessages: UILabel!
+    
     @IBOutlet weak var memberCollectionView: UICollectionView!
     @IBOutlet weak var teamCollectionView: UICollectionView!
     
-    let startColor: UIColor = UIColor(displayP3Red: 23.0/255, green: 222.0/255, blue: 204.0/255, alpha: 1.0)
-    let endColor: UIColor = UIColor(displayP3Red: 46.0/255, green: 104.0/255, blue: 225.0/255, alpha: 1.0)
-    let gradient: CAGradientLayer = CAGradientLayer()
-    
-    var members: [String] = []
-    var teams: [String] = []
-    
-    func initGradient() {
-        gradient.frame = teamCardUp.bounds
-        gradient.colors = [startColor.cgColor, endColor.cgColor]
-        gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
-        gradient.endPoint = CGPoint(x: 1.0, y: 0.5)
-        gradient.cornerRadius = 6.0
-        
-        teamCardUp.layer.insertSublayer(self.gradient, at: 0)
+    @IBAction func editAction() {
+        // TODO: launch edit team profile screen
     }
-
+    
+    var myTeam: Team!
+    var members: [Member] = []
+    var teams: [Team] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -41,12 +38,19 @@ class MessagesViewController: UIViewController, UICollectionViewDelegate, UIColl
         teamCollectionView.delegate = self
         teamCollectionView.dataSource = self
         
+        loadMyTeam()
         loadMembers()
         loadTeams()
     }
     
     override func viewDidLayoutSubviews() {
-        initGradient()
+        teamCard.setCardView()
+        initTeamCardUpGradient()
+        
+        ImageUtils.downloadAndSetImage(url: myTeam.pictureUrl, cornerRadius: 10.0, imageView: teamCardPicture)
+        teamCardName.text = myTeam.name
+        Mark.setDisplayedText(view: teamCardMark, mark: myTeam.mark)
+        teamCardNotReadMessages.text = "\(21) messages non lus"
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,22 +58,29 @@ class MessagesViewController: UIViewController, UICollectionViewDelegate, UIColl
         // Dispose of any resources that can be recreated.
     }
     
+    func initTeamCardUpGradient() {
+        let gradient = GradientUtils.getDefaultGradient(bounds: teamCardUp.bounds, cornerRadius: 6.0)
+        teamCardUp.layer.insertSublayer(gradient, at: 0)
+    }
+    
+    func loadMyTeam() {
+        myTeam = Team.debugTeam(index: 1)
+    }
+    
     func loadMembers() {
         members.removeAll()
-        members.append("Member 1")
-        members.append("Member 2")
-        members.append("Member 3")
-        members.append("Member 4")
+        for index in 0...10 {
+            members.append(Member.debugMember(index: index))
+        }
         
         memberCollectionView.reloadData()
     }
 
     func loadTeams() {
         teams.removeAll()
-        teams.append("Team 1")
-        teams.append("Team 2")
-        teams.append("Team 3")
-        teams.append("Team 4")
+        for index in 0...10 {
+            teams.append(Team.debugTeam(index: index))
+        }
         
         teamCollectionView.reloadData()
     }
@@ -83,11 +94,16 @@ class MessagesViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == memberCollectionView {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "memberCollectionViewCell", for: indexPath)
+            let cell: MessagesMemberCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "messagesMemberCell", for: indexPath) as! MessagesMemberCollectionViewCell
+            
+            cell.member = members[indexPath.row]
             
             return cell
         } else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "teamCollectionViewCell", for: indexPath)
+            let cell: MessagesTeamCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "messagesTeamCell", for: indexPath) as! MessagesTeamCollectionViewCell
+            
+            cell.team = teams[indexPath.row]
+            
             return cell
         }
     }

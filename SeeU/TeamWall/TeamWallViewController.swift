@@ -68,7 +68,7 @@ class TeamWallViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == typeCollection {
-            let cell: TypeCollectionViewCell = typeCollection.dequeueReusableCell(withReuseIdentifier: "typeCollectionViewCell", for: indexPath) as! TypeCollectionViewCell
+            let cell: TypeCollectionViewCell = typeCollection.dequeueReusableCell(withReuseIdentifier: "teamwallTypeCell", for: indexPath) as! TypeCollectionViewCell
             
             cell.name.text = types[indexPath.row]
             
@@ -77,7 +77,7 @@ class TeamWallViewController: UIViewController, UICollectionViewDelegate, UIColl
             
             return cell
         } else {
-            let cell: TeamCollectionViewCell = teamCollection.dequeueReusableCell(withReuseIdentifier: "teamCollectionViewCell", for: indexPath) as! TeamCollectionViewCell
+            let cell: TeamCollectionViewCell = teamCollection.dequeueReusableCell(withReuseIdentifier: "teamwallTeamCell", for: indexPath) as! TeamCollectionViewCell
             
             cell.name.text = teams[indexPath.row]
             

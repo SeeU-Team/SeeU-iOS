@@ -1,5 +1,5 @@
 //
-//  TeamCollectionViewCell.swift
+//  MessagesTeamCollectionViewCell.swift
 //  SeeU
 //
 //  Created by Thomas Fouan on 11/03/2018.
@@ -64,32 +64,5 @@ class TeamCollectionViewCell: UICollectionViewCell {
         extraMembers.text = "+4"
         extraMembers.layer.cornerRadius = 16
         extraMembers.layer.masksToBounds = true
-    }
-}
-
-extension UIView {
-    
-    func setCardView(view: UIView) {
-        /*
-        view.layer.cornerRadius = 8.0
-        view.layer.borderColor = UIColor.clear.cgColor
-        view.layer.borderWidth = 5.0
-        view.layer.shadowOpacity = 0.5
-        view.layer.shadowColor = UIColor.lightGray.cgColor
-        view.layer.shadowRadius = 5.0
-        view.layer.shadowOffset = CGSize(width:1, height: 1)
-        view.layer.masksToBounds = false
- */
-        /*
-        view.layer.masksToBounds = false
-        view.layer.shadowColor = UIColor.black.cgColor
-        view.layer.shadowOpacity = 0.5
-        view.layer.shadowOffset = CGSize(width: 1, height: 1)
-        view.layer.shadowRadius = 1
-        
-        view.layer.shadowPath = UIBezierPath(rect: bounds).cgPath
-        view.layer.shouldRasterize = true
-        view.layer.rasterizationScale = UIScreen.main.scale
- */
     }
 }

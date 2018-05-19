@@ -41,7 +41,7 @@
                                     <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="typeCollectionViewCell" id="2g5-jA-EQx" customClass="TypeCollectionViewCell" customModule="SeeU" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="teamwallTypeCell" id="2g5-jA-EQx" customClass="TypeCollectionViewCell" customModule="SeeU" customModuleProvider="target">
                                         <rect key="frame" x="10" y="7.666666666666667" width="178" height="75"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -114,7 +114,7 @@
                                     <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="teamCollectionViewCell" id="Ibg-I1-aB2" customClass="TeamCollectionViewCell" customModule="SeeU" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="teamwallTeamCell" id="Ibg-I1-aB2" customClass="TeamCollectionViewCell" customModule="SeeU" customModuleProvider="target">
                                         <rect key="frame" x="10" y="12.666666666666666" width="220" height="303"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -372,7 +372,6 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstItem="NcU-M8-Jlv" firstAttribute="trailing" secondItem="OqO-Md-C7V" secondAttribute="trailing" id="1ZV-07-BHl"/>
                                                             <constraint firstItem="NcU-M8-Jlv" firstAttribute="leading" secondItem="QUM-L4-pbQ" secondAttribute="trailing" constant="8" id="5T3-Vk-Coc"/>
@@ -390,7 +389,6 @@
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3c9-Hq-6wM" userLabel="TeamMembers">
                                                                 <rect key="frame" x="0.0" y="0.0" width="160" height="50"/>
-                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="Bvk-Xa-fpg"/>
                                                                     <constraint firstAttribute="width" constant="160" id="cwo-Qf-SyQ"/>
@@ -403,7 +401,6 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstItem="3c9-Hq-6wM" firstAttribute="leading" secondItem="GpM-KC-hrl" secondAttribute="leading" id="VH8-yo-pju"/>
                                                             <constraint firstItem="3c9-Hq-6wM" firstAttribute="top" secondItem="GpM-KC-hrl" secondAttribute="top" id="db7-O5-I0g"/>
@@ -437,6 +434,9 @@
                                                         <integer key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="editAction" destination="8rJ-Kc-sve" eventType="touchUpInside" id="urn-03-dts"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DIRECT MESSAGES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YWG-Yv-hdS" userLabel="DirectMessages">
                                                 <rect key="frame" x="16" y="159" width="343" height="21"/>
@@ -457,7 +457,7 @@
                                                     <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="memberCollectionViewCell" id="Efy-VI-FiN">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="messagesMemberCell" id="Efy-VI-FiN" customClass="MessagesMemberCollectionViewCell" customModule="SeeU" customModuleProvider="target">
                                                         <rect key="frame" x="10" y="10" width="148" height="180"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -480,12 +480,12 @@
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="☆☆☆☆☆" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Znv-j7-ugs" userLabel="MemberMark">
                                                                     <rect key="frame" x="30.666666666666664" y="133" width="86.666666666666686" height="21"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
+                                                                    <color key="textColor" red="0.99215686274509807" green="0.79607843137254897" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                         </view>
-                                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstItem="Znv-j7-ugs" firstAttribute="top" secondItem="Ngk-nU-1O2" secondAttribute="bottom" id="9r2-V3-XNS"/>
                                                             <constraint firstItem="I6Z-W5-eqV" firstAttribute="top" secondItem="Efy-VI-FiN" secondAttribute="firstBaseline" constant="8" id="NMC-Xd-Rcb"/>
@@ -494,6 +494,11 @@
                                                             <constraint firstItem="Ngk-nU-1O2" firstAttribute="top" secondItem="I6Z-W5-eqV" secondAttribute="bottom" constant="4" id="rNF-s1-uR2"/>
                                                             <constraint firstItem="I6Z-W5-eqV" firstAttribute="centerX" secondItem="Efy-VI-FiN" secondAttribute="centerX" id="yEu-5f-5xN"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <outlet property="mark" destination="Znv-j7-ugs" id="Nr1-Rj-jhz"/>
+                                                            <outlet property="name" destination="Ngk-nU-1O2" id="yCU-n0-FbQ"/>
+                                                            <outlet property="picture" destination="I6Z-W5-eqV" id="803-Ma-6fl"/>
+                                                        </connections>
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
@@ -516,7 +521,7 @@
                                                     <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="teamCollectionViewCell" id="Q6z-EX-184">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="messagesTeamCell" id="Q6z-EX-184" customClass="MessagesTeamCollectionViewCell" customModule="SeeU" customModuleProvider="target">
                                                         <rect key="frame" x="10" y="5" width="250" height="250"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -524,28 +529,31 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Les Lascars" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CEv-Yr-T1U" userLabel="TeamName">
-                                                                    <rect key="frame" x="16" y="194" width="218" height="30"/>
+                                                                    <rect key="frame" x="12" y="194" width="222" height="30"/>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#fiesta#noche#caliente" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efq-ZI-2eP" userLabel="TeamTags">
-                                                                    <rect key="frame" x="16" y="224" width="218" height="18"/>
+                                                                    <rect key="frame" x="12" y="224" width="222" height="18"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                         </view>
-                                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstItem="efq-ZI-2eP" firstAttribute="leading" secondItem="Q6z-EX-184" secondAttribute="leadingMargin" constant="8" id="2je-hb-ykm"/>
+                                                            <constraint firstItem="efq-ZI-2eP" firstAttribute="leading" secondItem="Q6z-EX-184" secondAttribute="leadingMargin" constant="4" id="2je-hb-ykm"/>
                                                             <constraint firstItem="CEv-Yr-T1U" firstAttribute="trailing" secondItem="Q6z-EX-184" secondAttribute="trailingMargin" constant="-8" id="6rr-Lj-KQZ"/>
-                                                            <constraint firstItem="CEv-Yr-T1U" firstAttribute="leading" secondItem="Q6z-EX-184" secondAttribute="leadingMargin" constant="8" id="BBg-Ke-uyW"/>
+                                                            <constraint firstItem="CEv-Yr-T1U" firstAttribute="leading" secondItem="Q6z-EX-184" secondAttribute="leadingMargin" constant="4" id="BBg-Ke-uyW"/>
                                                             <constraint firstItem="CEv-Yr-T1U" firstAttribute="bottom" secondItem="efq-ZI-2eP" secondAttribute="top" id="BGn-Kp-Dfd"/>
                                                             <constraint firstItem="efq-ZI-2eP" firstAttribute="trailing" secondItem="Q6z-EX-184" secondAttribute="trailingMargin" constant="-8" id="Gk7-MD-9nw"/>
                                                             <constraint firstItem="efq-ZI-2eP" firstAttribute="bottom" secondItem="Q6z-EX-184" secondAttribute="bottomMargin" id="gqa-QO-wcC"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <outlet property="name" destination="CEv-Yr-T1U" id="zrD-a9-mZQ"/>
+                                                            <outlet property="tags" destination="efq-ZI-2eP" id="TYB-C9-oBp"/>
+                                                        </connections>
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
@@ -599,6 +607,11 @@
                     <tabBarItem key="tabBarItem" title="Messages" image="second" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="memberCollectionView" destination="gkf-bW-gvt" id="aOh-AD-WaQ"/>
+                        <outlet property="teamCard" destination="kYn-IK-lt7" id="ef9-M1-jRs"/>
+                        <outlet property="teamCardMark" destination="EIk-HF-xwE" id="vFg-oJ-JpO"/>
+                        <outlet property="teamCardName" destination="NcU-M8-Jlv" id="Dno-vf-dSE"/>
+                        <outlet property="teamCardNotReadMessages" destination="G7p-Mb-jD7" id="CWR-Oe-kX1"/>
+                        <outlet property="teamCardPicture" destination="QUM-L4-pbQ" id="k3d-tj-tNq"/>
                         <outlet property="teamCardUp" destination="OqO-Md-C7V" id="r4O-3x-OVQ"/>
                         <outlet property="teamCollectionView" destination="NMG-0Q-SJZ" id="KcR-lf-Efn"/>
                     </connections>
